@@ -1,0 +1,27 @@
+flowchart LR
+    X[Input: B,T,5,9] --> MM[Loss-map sensor selection]
+    MM --> P24
+    subgraph P24[24 parallel target-joint paths]
+      direction LR
+      S[Selected 9D sensor stream] --> MFE[Linear 9 to 128 + ReLU<br/>2-layer LSTM, hidden 128]
+      C[Sensor category and XYZ] --> SCE[Frequency encoding + embedding<br/>SCE MLP]
+      SCE --> GB[Gamma and beta placement codes]
+      MFE --> JNM[3-layer LSTM JNM<br/>placement modulation]
+      GB --> JNM
+    end
+    P24 --> F[Joint features: B,T,24,128]
+    F --> GL[Global 3-layer LSTM]
+    F --> UB[Upper-body LSTMs]
+    F --> LB[Lower-body LSTMs]
+    F --> TB[Torso LSTMs]
+    GL --> R[24 global 6D rotations]
+    UB --> R
+    LB --> R
+    TB --> R
+    F --> CT[2-layer contact LSTM]
+    F --> RV[2-layer root-velocity LSTM]
+    R --> IK[Rotation matrices + inverse kinematics]
+    CT --> T[Contact-aware translation]
+    RV --> T
+    IK --> OUT[24 local rotations + joints]
+    T --> OUT

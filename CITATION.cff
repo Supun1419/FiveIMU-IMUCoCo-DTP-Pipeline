@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the upstream IMUCoCo work when using this runtime."
+title: "Five-IMU Full-Body Reconstruction with IMUCoCo and DTP"
+type: software
+license: GPL-3.0-only
+preferred-citation:
+  type: conference-paper
+  title: "IMUCoCo: Enabling Flexible On-Body IMU Placement for Human Pose Estimation and Activity Recognition"
+  authors:
+    - family-names: Zhou
+      given-names: Haozhe
+    - family-names: Arakawa
+      given-names: Riku
+    - family-names: Agarwal
+      given-names: Yuvraj
+    - family-names: Goel
+      given-names: Mayank
+  year: 2025
+  doi: 10.1145/3746059.3747695

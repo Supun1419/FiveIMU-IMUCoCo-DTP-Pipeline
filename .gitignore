@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Runtime output and datasets
+experiments/
+datasets/
+exp_out/
+*.log
+mqtt_imu_capture_*.csv
+
+# Downloaded checkpoints and licensed body-model assets
+saved_checkpoints/*.pth
+saved_checkpoints/*.pt
+saved_checkpoints/*.ckpt
+smpl/*.pkl
+smplh/**/*.npz
+smplh/**/*.pkl
+
+# Large recordings and archives
+*.tar
+*.tar.bz2
+*.zip
+*.npz
+*.npy
+*.mvnx
+*.c3d
