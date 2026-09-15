@@ -251,8 +251,10 @@ over an independently held-out test set. A publication-quality accuracy claim
 should be calculated from every synchronized frame and should report the test
 protocol, participant split, calibration procedure, and confidence intervals.
 
-<details>
-<summary><strong>Open the complete 11-frame live-result gallery</strong></summary>
+### Live Reconstruction Gallery
+
+The screenshots below show the SMPL-H reconstruction and the corresponding
+live motion-capture comparison used for the measurements in the table above.
 
 | T-pose, frame 3406 | Arms raised, frame 3573 |
 |---|---|
@@ -277,8 +279,6 @@ protocol, participant split, calibration procedure, and confidence intervals.
 | Cross-leg pose, frame 6694 |
 |---|
 | <img src="docs/assets/live-results/live-frame-6694-cross-leg.png" alt="Cross-leg reconstruction and mocap comparison at frame 6694" width="460"> |
-
-</details>
 
 ## Testing
 
